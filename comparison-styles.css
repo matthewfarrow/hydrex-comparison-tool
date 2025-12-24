@@ -218,9 +218,10 @@ body {
 .platform-logo {
     width: 120px;
     height: 120px;
-    object-fit: contain;
+    object-fit: cover;
     margin: 0 auto;
-    border-radius: 20px;
+    border-radius: 50%;
+    border: 3px solid var(--border-light);
 }
 
 .platform-icon {
