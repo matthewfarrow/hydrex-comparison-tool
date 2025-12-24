@@ -67,20 +67,12 @@ body {
 .logo {
     display: flex;
     align-items: center;
-    gap: 12px;
     text-decoration: none;
 }
 
-.logo-icon {
+.logo-full {
     height: 40px;
-    width: 40px;
-}
-
-.logo-text {
-    font-size: 24px;
-    font-weight: 800;
-    color: var(--text-primary);
-    letter-spacing: 0.05em;
+    width: auto;
 }
 
 .nav-links {
@@ -643,8 +635,9 @@ body {
 }
 
 .footer-logo-img {
-    height: 50px;
+    height: 60px;
     width: auto;
+    filter: brightness(0) invert(1);
 }
 
 .footer-description {
