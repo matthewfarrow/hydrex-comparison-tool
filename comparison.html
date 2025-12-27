@@ -455,7 +455,6 @@
             <div class="feature-comparison-grid">
                 <!-- Feature 1 -->
                 <div class="feature-comparison-card">
-                    <div class="feature-icon">🚀</div>
                     <h3 class="feature-name">Fiat Onramp</h3>
                     <div class="platform-checks">
                         <div class="platform-check hydrex-check">
@@ -475,7 +474,6 @@
 
                 <!-- Feature 2 -->
                 <div class="feature-comparison-card">
-                    <div class="feature-icon">🌊</div>
                     <h3 class="feature-name">Omni-Liquidity Aggregation</h3>
                     <div class="platform-checks">
                         <div class="platform-check hydrex-check">
@@ -495,7 +493,6 @@
 
                 <!-- Feature 3 -->
                 <div class="feature-comparison-card">
-                    <div class="feature-icon">⚡</div>
                     <h3 class="feature-name">Based Swap Guarantee</h3>
                     <div class="platform-checks">
                         <div class="platform-check hydrex-check">
@@ -515,7 +512,6 @@
 
                 <!-- Feature 4 -->
                 <div class="feature-comparison-card">
-                    <div class="feature-icon">💰</div>
                     <h3 class="feature-name">No Fee Clawbacks</h3>
                     <div class="platform-checks">
                         <div class="platform-check hydrex-check">
@@ -535,7 +531,6 @@
 
                 <!-- Feature 5 -->
                 <div class="feature-comparison-card">
-                    <div class="feature-icon">🔒</div>
                     <h3 class="feature-name">Reserve-Backed Emissions</h3>
                     <div class="platform-checks">
                         <div class="platform-check hydrex-check">
@@ -555,7 +550,6 @@
 
                 <!-- Feature 6 -->
                 <div class="feature-comparison-card">
-                    <div class="feature-icon">🤝</div>
                     <h3 class="feature-name">Strategic Partner Program</h3>
                     <div class="platform-checks">
                         <div class="platform-check hydrex-check">
@@ -575,7 +569,6 @@
 
                 <!-- Feature 7 -->
                 <div class="feature-comparison-card">
-                    <div class="feature-icon">🏗️</div>
                     <h3 class="feature-name">Morpho Gauges</h3>
                     <div class="platform-checks">
                         <div class="platform-check hydrex-check">
@@ -595,7 +588,6 @@
 
                 <!-- Feature 8 -->
                 <div class="feature-comparison-card">
-                    <div class="feature-icon">📦</div>
                     <h3 class="feature-name">Simplified Liquidity Provision</h3>
                     <div class="platform-checks">
                         <div class="platform-check hydrex-check">
@@ -664,19 +656,53 @@
 
     <script src="comparison-script.js"></script>
     <script>
-        // Tab switching functionality
+        // Tab navigation with smooth scrolling
         document.querySelectorAll('.tab-button').forEach(button => {
             button.addEventListener('click', () => {
                 const tabId = button.getAttribute('data-tab');
+                const targetSection = document.getElementById(tabId);
                 
-                // Remove active class from all buttons and content
+                // Remove active class from all buttons
                 document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
-                document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
                 
-                // Add active class to clicked button and corresponding content
+                // Add active class to clicked button
                 button.classList.add('active');
-                document.getElementById(tabId).classList.add('active');
+                
+                // Smooth scroll to the section
+                if (targetSection) {
+                    const offsetTop = targetSection.offsetTop - 120; // Account for sticky tabs
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
             });
+        });
+
+        // Scroll spy - highlight active tab based on scroll position
+        const observerOptions = {
+            root: null,
+            rootMargin: '-120px 0px -60% 0px',
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const tabId = entry.target.id;
+                    document.querySelectorAll('.tab-button').forEach(btn => {
+                        btn.classList.remove('active');
+                        if (btn.getAttribute('data-tab') === tabId) {
+                            btn.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        // Observe all tab content sections
+        document.querySelectorAll('.tab-content').forEach(section => {
+            observer.observe(section);
         });
     </script>
 </body>
