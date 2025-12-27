@@ -1008,7 +1008,11 @@ html {
     padding: 16px 32px;
     background: linear-gradient(135deg, rgba(0, 82, 255, 0.08) 0%, rgba(0, 204, 204, 0.08) 100%);
     border-radius: 16px;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    line-height: 1;
 }
 
 .platform-headers-grid {
