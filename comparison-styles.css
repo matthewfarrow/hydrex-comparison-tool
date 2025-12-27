@@ -1097,6 +1097,24 @@ html {
     margin-bottom: 8px;
 }
 
+.feature-list .check-icon {
+    color: var(--success-green);
+    font-weight: 700;
+    margin-right: 4px;
+}
+
+.feature-list .cross-icon {
+    color: var(--error-red);
+    font-weight: 700;
+    margin-right: 4px;
+}
+
+.feature-list .partial-icon {
+    color: var(--warning-orange);
+    font-weight: 700;
+    margin-right: 4px;
+}
+
 .feature-description {
     font-size: 13px;
     color: var(--text-light);
