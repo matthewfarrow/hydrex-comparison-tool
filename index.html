@@ -656,53 +656,58 @@
 
     <script src="comparison-script.js"></script>
     <script>
-        // Tab navigation with smooth scrolling
-        document.querySelectorAll('.tab-button').forEach(button => {
-            button.addEventListener('click', () => {
-                const tabId = button.getAttribute('data-tab');
-                const targetSection = document.getElementById(tabId);
-                
-                // Remove active class from all buttons
-                document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
-                
-                // Add active class to clicked button
-                button.classList.add('active');
-                
-                // Smooth scroll to the section
-                if (targetSection) {
-                    const offsetTop = targetSection.offsetTop - 120; // Account for sticky tabs
-                    window.scrollTo({
-                        top: offsetTop,
-                        behavior: 'smooth'
-                    });
-                }
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tab navigation with smooth scrolling
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.addEventListener('click', () => {
+                    const tabId = button.getAttribute('data-tab');
+                    const targetSection = document.getElementById(tabId);
+                    
+                    console.log('Tab clicked:', tabId, 'Target found:', !!targetSection);
+                    
+                    // Remove active class from all buttons
+                    document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    button.classList.add('active');
+                    
+                    // Smooth scroll to the section
+                    if (targetSection) {
+                        const offsetTop = targetSection.offsetTop - 140; // Account for sticky navbar + tabs
+                        console.log('Scrolling to:', offsetTop);
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
             });
-        });
 
-        // Scroll spy - highlight active tab based on scroll position
-        const observerOptions = {
-            root: null,
-            rootMargin: '-120px 0px -60% 0px',
-            threshold: 0
-        };
+            // Scroll spy - highlight active tab based on scroll position
+            const observerOptions = {
+                root: null,
+                rootMargin: '-140px 0px -60% 0px',
+                threshold: 0
+            };
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const tabId = entry.target.id;
-                    document.querySelectorAll('.tab-button').forEach(btn => {
-                        btn.classList.remove('active');
-                        if (btn.getAttribute('data-tab') === tabId) {
-                            btn.classList.add('active');
-                        }
-                    });
-                }
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const tabId = entry.target.id;
+                        document.querySelectorAll('.tab-button').forEach(btn => {
+                            btn.classList.remove('active');
+                            if (btn.getAttribute('data-tab') === tabId) {
+                                btn.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all tab content sections
+            document.querySelectorAll('.tab-content').forEach(section => {
+                observer.observe(section);
             });
-        }, observerOptions);
-
-        // Observe all tab content sections
-        document.querySelectorAll('.tab-content').forEach(section => {
-            observer.observe(section);
         });
     </script>
 </body>
