@@ -37,289 +37,411 @@
         </div>
     </section>
 
-    <!-- Comparison Section - Category-based -->
-    <section class="comparison-section-new">
+    <!-- Comparison Section - Tabbed -->
+    <section class="comparison-section-tabbed">
         <div class="container">
-            <!-- Platform Headers -->
-            <div class="platform-headers-grid">
-                <div class="category-label-header"></div>
-                <div class="platform-header hydrex-header">
-                    <img src="hydrex-logo.png" alt="Hydrex" class="platform-header-logo">
-                    <h3>Hydrex</h3>
-                    <p class="platform-header-subtitle">Omni-Liquidity MetaDEX</p>
-                </div>
-                <div class="platform-header">
-                    <img src="https://assets.coingecko.com/coins/images/31745/large/token.png" alt="Aerodrome" class="platform-header-logo">
-                    <h3>Aerodrome</h3>
-                    <p class="platform-header-subtitle">Leading DEX on Base</p>
-                </div>
-                <div class="platform-header">
-                    <img src="https://cryptologos.cc/logos/uniswap-uni-logo.png" alt="Uniswap" class="platform-header-logo">
-                    <h3>Uniswap</h3>
-                    <p class="platform-header-subtitle">Global DEX Leader</p>
-                </div>
+            <!-- Jump to comparison link -->
+            <div class="jump-link">
+                <a href="#comparison-table">View comparison →</a>
             </div>
 
-            <!-- Platform Type -->
-            <div class="comparison-category-header">
-                <h3>🏢 Platform Overview</h3>
-            </div>
-            <div class="category-row">
-                <div class="category-label">
-                    <h4>Platform Type</h4>
-                </div>
-                <div class="feature-cell hydrex-cell">
-                    <p class="feature-value">Omni-Liquidity MetaDEX</p>
-                    <p class="feature-detail-small">Built for the entire Base ecosystem</p>
-                </div>
-                <div class="feature-cell">
-                    <p class="feature-value">Decentralized Exchange</p>
-                    <p class="feature-detail-small">Velodrome V2 fork on Base</p>
-                </div>
-                <div class="feature-cell">
-                    <p class="feature-value">Decentralized Exchange</p>
-                    <p class="feature-detail-small">Multi-chain AMM protocol</p>
-                </div>
+            <!-- Comparison Tabs -->
+            <div class="comparison-tabs" id="comparison-table">
+                <button class="tab-button active" data-tab="platform">Platform</button>
+                <button class="tab-button" data-tab="revenue">Revenue & Fees</button>
+                <button class="tab-button" data-tab="tokenomics">Tokenomics</button>
+                <button class="tab-button" data-tab="user-experience">User Experience</button>
+                <button class="tab-button" data-tab="integrations">Integrations</button>
             </div>
 
-            <!-- Liquidity Options -->
-            <div class="category-row">
-                <div class="category-label">
-                    <h4>Liquidity Options</h4>
+            <!-- Tab Content: Platform Overview -->
+            <div class="tab-content active" id="platform">
+                <div class="tab-intro">
+                    <h3>Platform Overview</h3>
+                    <p>See how Hydrex's omni-liquidity approach compares to traditional DEXs on Base.</p>
                 </div>
-                <div class="feature-cell hydrex-cell">
-                    <div class="check-item">✓ Simplified Liquidity Provision</div>
-                    <div class="check-item">✓ Paired Liquidity</div>
-                    <div class="check-item">✓ Omni-Liquidity Aggregation</div>
-                    <p class="feature-detail-small">Aggregate earnings across multiple protocols</p>
-                </div>
-                <div class="feature-cell">
-                    <div class="check-item">✓ Concentrated Liquidity (Slipstream)</div>
-                    <div class="check-item">✓ Paired Liquidity</div>
-                    <div class="cross-item">✗ Multi-Protocol Earning</div>
-                    <p class="feature-detail-small">Limited to Aerodrome pools; 90%+ Base CL volume</p>
-                </div>
-                <div class="feature-cell">
-                    <div class="check-item">✓ Concentrated Liquidity (V3/V4)</div>
-                    <div class="check-item">✓ Paired Liquidity</div>
-                    <div class="cross-item">✗ Multi-Protocol Earning</div>
-                    <p class="feature-detail-small">Limited to Uniswap pools; trails Aerodrome on Base</p>
-                </div>
+                
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th class="feature-column"></th>
+                            <th class="platform-column hydrex-column">
+                                <img src="hydrex-logo.png" alt="Hydrex" class="table-logo">
+                                <div class="platform-info">
+                                    <strong>Hydrex</strong>
+                                </div>
+                            </th>
+                            <th class="platform-column">
+                                <img src="https://assets.coingecko.com/coins/images/31745/large/token.png" alt="Aerodrome" class="table-logo">
+                                <div class="platform-info">
+                                    <strong>Aerodrome</strong>
+                                </div>
+                            </th>
+                            <th class="platform-column">
+                                <img src="https://cryptologos.cc/logos/uniswap-uni-logo.png" alt="Uniswap" class="table-logo">
+                                <div class="platform-info">
+                                    <strong>Uniswap</strong>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="feature-name">Platform Type</td>
+                            <td class="hydrex-cell">
+                                <div class="feature-value">Omni-Liquidity MetaDEX</div>
+                                <div class="feature-description">Built for the entire Base ecosystem</div>
+                            </td>
+                            <td>
+                                <div class="feature-value">Decentralized Exchange</div>
+                                <div class="feature-description">Velodrome V2 fork on Base</div>
+                            </td>
+                            <td>
+                                <div class="feature-value">Decentralized Exchange</div>
+                                <div class="feature-description">Multi-chain AMM protocol</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Liquidity Options</td>
+                            <td class="hydrex-cell">
+                                <div class="feature-list">
+                                    ✓ Simplified Liquidity Provision<br>
+                                    ✓ Paired Liquidity<br>
+                                    ✓ Omni-Liquidity Aggregation
+                                </div>
+                                <div class="feature-description">Aggregate earnings across multiple protocols</div>
+                            </td>
+                            <td>
+                                <div class="feature-list">
+                                    ✓ Concentrated Liquidity (Slipstream)<br>
+                                    ✓ Paired Liquidity
+                                </div>
+                                <div class="feature-description">Limited to Aerodrome pools; 90%+ Base CL volume</div>
+                            </td>
+                            <td>
+                                <div class="feature-list">
+                                    ✓ Concentrated Liquidity (V3/V4)<br>
+                                    ✓ Paired Liquidity
+                                </div>
+                                <div class="feature-description">Limited to Uniswap pools; trails Aerodrome on Base</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Supported Liquidity Providers</td>
+                            <td class="hydrex-cell">
+                                <div class="feature-list">
+                                    ✓ Uniswap LPs<br>
+                                    ✓ Morpho LPs<br>
+                                    ✓ Euler LPs<br>
+                                    ✓ Hydrex Native LPs
+                                </div>
+                                <div class="feature-description">Liquidity neutral across Base ecosystem</div>
+                            </td>
+                            <td>
+                                <div class="feature-list">
+                                    ✓ Aerodrome Native LPs
+                                </div>
+                                <div class="feature-description">Aerodrome pools only</div>
+                            </td>
+                            <td>
+                                <div class="feature-list">
+                                    ✓ Uniswap Native LPs
+                                </div>
+                                <div class="feature-description">Uniswap pools only</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
 
-            <!-- Supported Liquidity Providers -->
-            <div class="category-row">
-                <div class="category-label">
-                    <h4>Supported LPs</h4>
+            <!-- Tab Content: Revenue & Fees -->
+            <div class="tab-content" id="revenue">
+                <div class="tab-intro">
+                    <h3>Revenue & Fees</h3>
+                    <p>Compare how each platform distributes fees and rewards to users.</p>
                 </div>
-                <div class="feature-cell hydrex-cell">
-                    <div class="check-item">✓ Uniswap LPs</div>
-                    <div class="check-item">✓ Morpho LPs</div>
-                    <div class="check-item">✓ Euler LPs</div>
-                    <div class="check-item">✓ Hydrex Native LPs</div>
-                    <p class="feature-detail-small">Liquidity neutral across Base ecosystem</p>
-                </div>
-                <div class="feature-cell">
-                    <div class="check-item">✓ Aerodrome Native LPs</div>
-                    <div class="cross-item">✗ External LPs</div>
-                    <p class="feature-detail-small">Aerodrome pools only</p>
-                </div>
-                <div class="feature-cell">
-                    <div class="check-item">✓ Uniswap Native LPs</div>
-                    <div class="cross-item">✗ External LPs</div>
-                    <p class="feature-detail-small">Uniswap pools only</p>
-                </div>
+                
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th class="feature-column"></th>
+                            <th class="platform-column hydrex-column">
+                                <img src="hydrex-logo.png" alt="Hydrex" class="table-logo">
+                                <div class="platform-info">
+                                    <strong>Hydrex</strong>
+                                </div>
+                            </th>
+                            <th class="platform-column">
+                                <img src="https://assets.coingecko.com/coins/images/31745/large/token.png" alt="Aerodrome" class="table-logo">
+                                <div class="platform-info">
+                                    <strong>Aerodrome</strong>
+                                </div>
+                            </th>
+                            <th class="platform-column">
+                                <img src="https://cryptologos.cc/logos/uniswap-uni-logo.png" alt="Uniswap" class="table-logo">
+                                <div class="platform-info">
+                                    <strong>Uniswap</strong>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="feature-name">Revenue Model</td>
+                            <td class="hydrex-cell">
+                                <div class="feature-list">
+                                    ✓ Full Fee Distribution<br>
+                                    ✓ No Fee Clawbacks
+                                </div>
+                                <div class="feature-description">100% of fees to account holders—no volume thresholds</div>
+                            </td>
+                            <td>
+                                <div class="feature-list">
+                                    ✓ 100% Fees to veAERO Voters
+                                </div>
+                                <div class="feature-description">Fees may be clawed back if volume thresholds not met</div>
+                            </td>
+                            <td>
+                                <div class="feature-list">
+                                    ✓ Fees to LPs (Tiered)
+                                </div>
+                                <div class="feature-description">0.01%, 0.05%, 0.3%, 1% tiers to LPs only</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Execution Guarantee</td>
+                            <td class="hydrex-cell">
+                                <div class="feature-list">
+                                    ✓ Based Swap Guarantee
+                                </div>
+                                <div class="feature-description">200% compensation if better price found on Base</div>
+                            </td>
+                            <td>
+                                <div class="feature-description">Standard AMM execution</div>
+                            </td>
+                            <td>
+                                <div class="feature-description">Standard AMM execution</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
 
-            <!-- Revenue Model -->
-            <div class="comparison-category-header">
-                <h3>💰 Revenue & Fees</h3>
-            </div>
-            <div class="category-row">
-                <div class="category-label">
-                    <h4>Revenue Model</h4>
+            <!-- Tab Content: Tokenomics -->
+            <div class="tab-content" id="tokenomics">
+                <div class="tab-intro">
+                    <h3>Tokenomics & Governance</h3>
+                    <p>Understand how each platform's token model and governance works.</p>
                 </div>
-                <div class="feature-cell hydrex-cell">
-                    <div class="check-item highlight">✓ Full Fee Distribution</div>
-                    <div class="check-item highlight">✓ No Fee Clawbacks</div>
-                    <p class="feature-detail-small">100% of fees to account holders—no volume thresholds</p>
-                </div>
-                <div class="feature-cell">
-                    <div class="check-item">✓ 100% Fees to veAERO Voters</div>
-                    <div class="cross-item">✗ No Clawbacks</div>
-                    <p class="feature-detail-small">Fees may be clawed back if volume thresholds not met</p>
-                </div>
-                <div class="feature-cell">
-                    <div class="check-item">✓ Fees to LPs (Tiered)</div>
-                    <p class="feature-detail-small">0.01%, 0.05%, 0.3%, 1% tiers to LPs only</p>
-                </div>
-            </div>
-
-            <!-- Execution Guarantee -->
-            <div class="category-row">
-                <div class="category-label">
-                    <h4>Execution Guarantee</h4>
-                </div>
-                <div class="feature-cell hydrex-cell">
-                    <div class="check-item highlight">✓ Based Swap Guarantee</div>
-                    <p class="feature-detail-small">200% compensation if better price found on Base</p>
-                </div>
-                <div class="feature-cell">
-                    <div class="cross-item">✗ No Price Guarantee</div>
-                    <p class="feature-detail-small">Standard AMM execution</p>
-                </div>
-                <div class="feature-cell">
-                    <div class="cross-item">✗ No Price Guarantee</div>
-                    <p class="feature-detail-small">Standard AMM execution</p>
-                </div>
-            </div>
-
-            <!-- Tokenomics -->
-            <div class="comparison-category-header">
-                <h3>🔐 Tokenomics & Governance</h3>
-            </div>
-            <div class="category-row">
-                <div class="category-label">
-                    <h4>Tokenomics</h4>
-                </div>
-                <div class="feature-cell hydrex-cell">
-                    <div class="check-item">✓ Reserve-Backed ve(3,3)</div>
-                    <div class="check-item">✓ Sustainable Emissions</div>
-                    <div class="check-item">✓ Strategic Protocol Reserve</div>
-                    <p class="feature-detail-small">Each HYDX backed by reserves</p>
-                </div>
-                <div class="feature-cell">
-                    <div class="check-item">✓ ve(3,3) Model</div>
-                    <div class="check-item">✓ veAERO Vote-Lock</div>
-                    <div class="cross-item">✗ Reserve Backing</div>
-                    <p class="feature-detail-small">Emissions controlled by veAERO stakers</p>
-                </div>
-                <div class="feature-cell">
-                    <div class="check-item">✓ Fixed Supply (1B UNI)</div>
-                    <div class="check-item">✓ UNI Governance Token</div>
-                    <div class="cross-item">✗ ve(3,3) Model</div>
-                    <p class="feature-detail-small">Decentralized governance via UNI holders</p>
-                </div>
-            </div>
-
-            <!-- Partnership Benefits -->
-            <div class="category-row">
-                <div class="category-label">
-                    <h4>Partnership Benefits</h4>
-                </div>
-                <div class="feature-cell hydrex-cell">
-                    <div class="check-item">✓ Bribe Matching Available</div>
-                    <div class="check-item">✓ Strategic Partner Program</div>
-                    <div class="check-item">✓ Guaranteed Fees</div>
-                    <p class="feature-detail-small">Partners get bribe matching & guaranteed fees</p>
-                </div>
-                <div class="feature-cell">
-                    <div class="cross-item">✗ Bribe Matching</div>
-                    <div class="partial-item">~ Strategic Partner Program</div>
-                    <div class="cross-item">✗ Guaranteed Fees</div>
-                    <p class="feature-detail-small">Limited partnership benefits</p>
-                </div>
-                <div class="feature-cell">
-                    <div class="cross-item">✗ Bribe Matching</div>
-                    <div class="cross-item">✗ Strategic Partner Program</div>
-                    <div class="cross-item">✗ Guaranteed Fees</div>
-                    <p class="feature-detail-small">No formal partnership program</p>
-                </div>
+                
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th class="feature-column"></th>
+                            <th class="platform-column hydrex-column">
+                                <img src="hydrex-logo.png" alt="Hydrex" class="table-logo">
+                                <div class="platform-info">
+                                    <strong>Hydrex</strong>
+                                </div>
+                            </th>
+                            <th class="platform-column">
+                                <img src="https://assets.coingecko.com/coins/images/31745/large/token.png" alt="Aerodrome" class="table-logo">
+                                <div class="platform-info">
+                                    <strong>Aerodrome</strong>
+                                </div>
+                            </th>
+                            <th class="platform-column">
+                                <img src="https://cryptologos.cc/logos/uniswap-uni-logo.png" alt="Uniswap" class="table-logo">
+                                <div class="platform-info">
+                                    <strong>Uniswap</strong>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="feature-name">Tokenomics</td>
+                            <td class="hydrex-cell">
+                                <div class="feature-list">
+                                    ✓ Reserve-Backed ve(3,3)<br>
+                                    ✓ Sustainable Emissions<br>
+                                    ✓ Strategic Protocol Reserve
+                                </div>
+                                <div class="feature-description">Each HYDX backed by reserves</div>
+                            </td>
+                            <td>
+                                <div class="feature-list">
+                                    ✓ ve(3,3) Model<br>
+                                    ✓ veAERO Vote-Lock
+                                </div>
+                                <div class="feature-description">Emissions controlled by veAERO stakers</div>
+                            </td>
+                            <td>
+                                <div class="feature-list">
+                                    ✓ Fixed Supply (1B UNI)<br>
+                                    ✓ UNI Governance Token
+                                </div>
+                                <div class="feature-description">Decentralized governance via UNI holders</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Partnership Benefits</td>
+                            <td class="hydrex-cell">
+                                <div class="feature-list">
+                                    ✓ Bribe Matching Available<br>
+                                    ✓ Strategic Partner Program<br>
+                                    ✓ Guaranteed Fees
+                                </div>
+                                <div class="feature-description">Partners get bribe matching & guaranteed fees</div>
+                            </td>
+                            <td>
+                                <div class="feature-description">Limited partnership benefits</div>
+                            </td>
+                            <td>
+                                <div class="feature-description">No formal partnership program</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
 
-            <!-- User Onboarding -->
-            <div class="comparison-category-header">
-                <h3>👥 User Experience</h3>
-            </div>
-            <div class="category-row">
-                <div class="category-label">
-                    <h4>User Onboarding</h4>
+            <!-- Tab Content: User Experience -->
+            <div class="tab-content" id="user-experience">
+                <div class="tab-intro">
+                    <h3>User Experience</h3>
+                    <p>Compare onboarding options and user-facing features across platforms.</p>
                 </div>
-                <div class="feature-cell hydrex-cell">
-                    <div class="check-item">✓ Fiat Onramp (Coinbase)</div>
-                    <div class="check-item">✓ Wallet Connect</div>
-                    <div class="cross-item">✗ Social Login</div>
-                    <div class="cross-item">✗ Apple Pay</div>
-                    <div class="cross-item">✗ Base Login</div>
-                </div>
-                <div class="feature-cell">
-                    <div class="cross-item">✗ Social Login</div>
-                    <div class="cross-item">✗ Fiat Onramp</div>
-                    <div class="cross-item">✗ Apple Pay</div>
-                    <div class="cross-item">✗ Base Login</div>
-                    <div class="check-item">✓ Wallet Connect</div>
-                </div>
-                <div class="feature-cell">
-                    <div class="cross-item">✗ Social Login</div>
-                    <div class="cross-item">✗ Fiat Onramp</div>
-                    <div class="cross-item">✗ Apple Pay</div>
-                    <div class="cross-item">✗ Base Login</div>
-                    <div class="check-item">✓ Wallet Connect</div>
-                </div>
+                
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th class="feature-column"></th>
+                            <th class="platform-column hydrex-column">
+                                <img src="hydrex-logo.png" alt="Hydrex" class="table-logo">
+                                <div class="platform-info">
+                                    <strong>Hydrex</strong>
+                                </div>
+                            </th>
+                            <th class="platform-column">
+                                <img src="https://assets.coingecko.com/coins/images/31745/large/token.png" alt="Aerodrome" class="table-logo">
+                                <div class="platform-info">
+                                    <strong>Aerodrome</strong>
+                                </div>
+                            </th>
+                            <th class="platform-column">
+                                <img src="https://cryptologos.cc/logos/uniswap-uni-logo.png" alt="Uniswap" class="table-logo">
+                                <div class="platform-info">
+                                    <strong>Uniswap</strong>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="feature-name">User Onboarding</td>
+                            <td class="hydrex-cell">
+                                <div class="feature-list">
+                                    ✓ Fiat Onramp (Coinbase)<br>
+                                    ✓ Wallet Connect
+                                </div>
+                            </td>
+                            <td>
+                                <div class="feature-list">
+                                    ✓ Wallet Connect
+                                </div>
+                            </td>
+                            <td>
+                                <div class="feature-list">
+                                    ✓ Wallet Connect
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Market Position</td>
+                            <td class="hydrex-cell">
+                                <div class="feature-list">
+                                    ✓ Next-Gen Base Protocol<br>
+                                    ✓ Institutional-Grade Infrastructure
+                                </div>
+                                <div class="feature-description">Built for the future of Base</div>
+                            </td>
+                            <td>
+                                <div class="feature-list">
+                                    ✓ Leading Base DEX<br>
+                                    ✓ 50%+ Volume Share<br>
+                                    ✓ $1B+ TVL
+                                </div>
+                                <div class="feature-description">Dominates Base with capital-efficient pools</div>
+                            </td>
+                            <td>
+                                <div class="feature-list">
+                                    ✓ Global DEX Leader<br>
+                                    ✓ Cross-Chain Support<br>
+                                    ~ 9-10% Base Volume
+                                </div>
+                                <div class="feature-description">Multi-chain presence with brand recognition</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
 
-            <!-- Institutional Integrations -->
-            <div class="category-row">
-                <div class="category-label">
-                    <h4>Institutional Integrations</h4>
+            <!-- Tab Content: Integrations -->
+            <div class="tab-content" id="integrations">
+                <div class="tab-intro">
+                    <h3>Integrations</h3>
+                    <p>See how each platform integrates with the broader Base ecosystem.</p>
                 </div>
-                <div class="feature-cell hydrex-cell">
-                    <div class="check-item">✓ Morpho Gauges</div>
-                    <div class="check-item">✓ Euler Markets</div>
-                    <div class="check-item">✓ Zora Creator Coins</div>
-                    <p class="feature-detail-small">Built as liquidity OS for Base</p>
-                </div>
-                <div class="feature-cell">
-                    <div class="cross-item">✗ Morpho Gauges</div>
-                    <div class="cross-item">✗ Euler Markets</div>
-                    <div class="cross-item">✗ Zora Integration</div>
-                    <p class="feature-detail-small">Standard DEX integrations</p>
-                </div>
-                <div class="feature-cell">
-                    <div class="cross-item">✗ Morpho Gauges</div>
-                    <div class="cross-item">✗ Euler Markets</div>
-                    <div class="cross-item">✗ Zora Integration</div>
-                    <p class="feature-detail-small">Standard DEX integrations</p>
-                </div>
+                
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th class="feature-column"></th>
+                            <th class="platform-column hydrex-column">
+                                <img src="hydrex-logo.png" alt="Hydrex" class="table-logo">
+                                <div class="platform-info">
+                                    <strong>Hydrex</strong>
+                                </div>
+                            </th>
+                            <th class="platform-column">
+                                <img src="https://assets.coingecko.com/coins/images/31745/large/token.png" alt="Aerodrome" class="table-logo">
+                                <div class="platform-info">
+                                    <strong>Aerodrome</strong>
+                                </div>
+                            </th>
+                            <th class="platform-column">
+                                <img src="https://cryptologos.cc/logos/uniswap-uni-logo.png" alt="Uniswap" class="table-logo">
+                                <div class="platform-info">
+                                    <strong>Uniswap</strong>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="feature-name">Institutional Integrations</td>
+                            <td class="hydrex-cell">
+                                <div class="feature-list">
+                                    ✓ Morpho Gauges<br>
+                                    ✓ Euler Markets<br>
+                                    ✓ Zora Creator Coins
+                                </div>
+                                <div class="feature-description">Built as liquidity OS for Base</div>
+                            </td>
+                            <td>
+                                <div class="feature-description">Standard DEX integrations</div>
+                            </td>
+                            <td>
+                                <div class="feature-description">Standard DEX integrations</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
 
-            <!-- Market Position -->
-            <div class="category-row">
-                <div class="category-label">
-                    <h4>Market Position</h4>
-                </div>
-                <div class="feature-cell hydrex-cell">
-                    <div class="check-item">✓ Next-Gen Base Protocol</div>
-                    <div class="check-item">✓ Institutional-Grade Infrastructure</div>
-                    <p class="feature-detail-small">Built for the future of Base</p>
-                </div>
-                <div class="feature-cell">
-                    <div class="check-item">✓ Leading Base DEX</div>
-                    <div class="check-item">✓ 50%+ Volume Share</div>
-                    <div class="check-item">✓ $1B+ TVL</div>
-                    <p class="feature-detail-small">Dominates Base with capital-efficient pools</p>
-                </div>
-                <div class="feature-cell">
-                    <div class="check-item">✓ Global DEX Leader</div>
-                    <div class="check-item">✓ Cross-Chain Support</div>
-                    <div class="partial-item">~ 9-10% Base Volume</div>
-                    <p class="feature-detail-small">Multi-chain presence with brand recognition</p>
-                </div>
-            </div>
-
-            <!-- Call to Action Buttons -->
-            <div class="platform-cta-row">
-                <div class="category-label-cta"></div>
-                <div class="cta-cell hydrex-cta">
-                    <a href="https://hydrex.fi" class="btn-primary">Get Started with Hydrex</a>
-                    <a href="https://docs.hydrex.fi" class="btn-link">Learn More</a>
-                </div>
-                <div class="cta-cell">
-                    <a href="https://aerodrome.finance" class="btn-secondary" target="_blank">Visit Aerodrome</a>
-                </div>
-                <div class="cta-cell">
-                    <a href="https://app.uniswap.org" class="btn-secondary" target="_blank">Visit Uniswap</a>
-                </div>
+            <!-- Last Updated Note -->
+            <div class="last-updated">
+                Last updated December 2025
             </div>
         </div>
     </section>
@@ -541,6 +663,22 @@
     </footer>
 
     <script src="comparison-script.js"></script>
+    <script>
+        // Tab switching functionality
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const tabId = button.getAttribute('data-tab');
+                
+                // Remove active class from all buttons and content
+                document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding content
+                button.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+    </script>
 </body>
 </html>
 

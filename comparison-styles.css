@@ -862,7 +862,280 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Responsive Design */
+/* Tabbed Comparison Styles */
+.comparison-section-tabbed {
+    padding: 48px 0 96px 0;
+    background: var(--background-lighter);
+}
+
+.jump-link {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.jump-link a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+
+.jump-link a:hover {
+    color: var(--primary-blue-dark);
+}
+
+.comparison-tabs {
+    display: flex;
+    gap: 0;
+    background: var(--background-white);
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+    border: 1px solid var(--border-light);
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.tab-button {
+    flex: 1;
+    padding: 18px 24px;
+    background: transparent;
+    border: none;
+    border-right: 1px solid var(--border-light);
+    color: var(--text-secondary);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    font-family: 'Inter', sans-serif;
+}
+
+.tab-button:last-child {
+    border-right: none;
+}
+
+.tab-button:hover {
+    background: var(--background-lighter);
+    color: var(--primary-blue);
+}
+
+.tab-button.active {
+    background: var(--gradient-primary);
+    color: white;
+}
+
+.tab-button.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: white;
+}
+
+.tab-content {
+    display: none;
+    background: var(--background-white);
+    border-radius: 0 0 12px 12px;
+    padding: 48px 32px;
+    border: 1px solid var(--border-light);
+    border-top: none;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tab-intro {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.tab-intro h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.tab-intro p {
+    font-size: 18px;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Comparison Table Styles */
+.comparison-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.comparison-table thead {
+    background: linear-gradient(180deg, #F8FAFC 0%, #F1F5F9 100%);
+}
+
+.comparison-table th {
+    padding: 24px 20px;
+    text-align: left;
+    border-bottom: 2px solid var(--border-medium);
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.comparison-table thead tr th:not(:last-child) {
+    border-right: 1px solid var(--border-light);
+}
+
+.feature-column {
+    width: 25%;
+    color: var(--text-primary);
+}
+
+.platform-column {
+    width: 25%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.platform-column.hydrex-column {
+    background: linear-gradient(180deg, rgba(0, 82, 255, 0.05) 0%, rgba(0, 212, 255, 0.05) 100%);
+}
+
+.table-logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin: 0 auto 12px auto;
+    display: block;
+}
+
+.platform-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.platform-info strong {
+    font-size: 18px;
+    color: var(--text-primary);
+}
+
+.platform-subtitle {
+    font-size: 13px;
+    color: var(--text-light);
+    font-weight: 400;
+}
+
+.comparison-table tbody tr {
+    border-bottom: 1px solid var(--border-light);
+}
+
+.comparison-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.comparison-table tbody td {
+    padding: 28px 20px;
+    vertical-align: top;
+    border-right: 1px solid var(--border-light);
+}
+
+.comparison-table tbody td:last-child {
+    border-right: none;
+}
+
+.comparison-table tbody tr:nth-child(even) {
+    background: #FAFBFC;
+}
+
+.feature-name {
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--text-primary);
+}
+
+.hydrex-cell {
+    background: linear-gradient(135deg, rgba(0, 82, 255, 0.03) 0%, rgba(0, 212, 255, 0.03) 100%);
+    position: relative;
+}
+
+.hydrex-cell::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--gradient-primary);
+}
+
+.feature-value {
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.feature-list {
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.feature-description {
+    font-size: 13px;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-top: 12px;
+}
+
+.last-updated {
+    text-align: center;
+    margin-top: 32px;
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+/* Responsive Design for Tabs */
+@media (max-width: 1024px) {
+    .comparison-tabs {
+        flex-wrap: wrap;
+    }
+    
+    .tab-button {
+        flex: 0 0 calc(50% - 0.5px);
+    }
+    
+    .comparison-table {
+        font-size: 14px;
+    }
+    
+    .table-logo {
+        width: 36px;
+        height: 36px;
+    }
+}
 @media (max-width: 1200px) {
     .comparison-grid {
         grid-template-columns: 1fr;
